@@ -52,7 +52,7 @@ test:
 
 virtual-%:
 	$(RMDIR) '$(VIRTDIR)'
-	$(VIRTUALENV) '$(VIRTDIR)'
+	$(VIRTUALENV) -p $(PYTHON) '$(VIRTDIR)'
 	. '$(VIRTDIR)/bin/activate' && $(MAKE) '$*'
 
 deploy:
